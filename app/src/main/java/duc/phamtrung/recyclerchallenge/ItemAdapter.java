@@ -17,9 +17,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>
     private ArrayList<Item> items;
     private ItemSelected host;
 
-    public ItemAdapter(ArrayList<Item> items, Context host) {
+    public ItemAdapter(ArrayList<Item> items, Context context) {
         this.items = items;
-        this.host = (ItemSelected) host;
+        this.host = (ItemSelected) context;
     }
 
     public interface ItemSelected
@@ -35,6 +35,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>
             super(itemView);
             tvModel = itemView.findViewById(R.id.tvModel);
             tvName = itemView.findViewById(R.id.tvName);
+            imgView = itemView.findViewById(R.id.imgView);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,7 +69,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>
             case "Nissan":
                 holder.imgView.setImageResource(R.drawable.nissan);
                 break;
-            case "Volwagen":
+            case "Volkswagen":
                 holder.imgView.setImageResource(R.drawable.volkswagen);
                 break;
         }

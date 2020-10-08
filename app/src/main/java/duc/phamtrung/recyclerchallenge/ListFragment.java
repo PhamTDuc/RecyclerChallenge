@@ -48,8 +48,8 @@ public class ListFragment extends Fragment {
 
         layoutManager = new LinearLayoutManager(this.getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        ArrayList<Item> items=new ArrayList<>();
-        adapter = new ItemAdapter(items, this.getActivity());
+//        ArrayList<Item> items=new ArrayList<>();
+        adapter = new ItemAdapter(Application.items, this.getActivity());
         recyclerView.setAdapter(adapter);
     }
 
